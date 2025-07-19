@@ -1,4 +1,4 @@
-module c3
+module github.com/mocliamg1/antlr4-c3/ports/go
 
 go 1.24.4
 

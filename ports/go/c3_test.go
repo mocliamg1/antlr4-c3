@@ -6,7 +6,7 @@ import (
 
 	"github.com/antlr4-go/antlr/v4"
 
-	expr "c3/example/gen"
+	expr "github.com/mocliamg1/antlr4-c3/ports/go/example/gen"
 )
 
 // CountingErrorListener counts syntax errors
