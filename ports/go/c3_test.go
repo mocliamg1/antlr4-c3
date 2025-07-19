@@ -1,4 +1,4 @@
-package main
+package c3
 
 import (
 	"fmt"
@@ -6,8 +6,7 @@ import (
 
 	"github.com/antlr4-go/antlr/v4"
 
-	expr "antlr4-c3/ports/go/example/gen"
-	antlr_c3 "antlr4-c3/ports/go/lib"
+	expr "c3/example/gen"
 )
 
 // CountingErrorListener counts syntax errors
@@ -43,7 +42,7 @@ func TestSimpleExpression(t *testing.T) {
 		t.Errorf("Expected 0 errors, got %d", errorListener.ErrorCount)
 	}
 
-	core := antlr_c3.NewCompletionCore(parser, true, true)
+	core := NewCompletionCore(parser, true, true)
 
 	candidates := core.CollectCandidates(0, nil)
 
@@ -157,7 +156,7 @@ func TestTypicalExpression(t *testing.T) {
 		expr.ExprLexerEQUAL:    true,
 	}
 
-	core := antlr_c3.NewCompletionCore(parser, true, true)
+	core := NewCompletionCore(parser, true, true)
 	core.SetPreferredRules(preferredRules)
 	core.SetIgnoredTokens(ignoredTokens)
 

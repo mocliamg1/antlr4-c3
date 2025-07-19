@@ -1,4 +1,4 @@
-module antlr4-c3/ports/go
+module c3
 
 go 1.24.4
 
